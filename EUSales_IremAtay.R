@@ -24,14 +24,6 @@ corEUSales
 library(corrplot)
 corrplot(corEUSales)
 
-#Boxplot of all variables
-boxplot(EUSales$Population)
-boxplot(EUSales$GDPperHead)
-boxplot(EUSales$UnemploymentRate)
-boxplot(EUSales$EducationSpending)
-boxplot(EUSales$SalesPerCapita)
-boxplot(EUSales$ComputerSales)
-
 #Modeling for SalesPerCapita 
 m1_salespercapita<-lm(SalesPerCapita ~ Population + GDPperHead + UnemploymentRate + EducationSpending + ComputerSales, data = EUSales)
 m2_salespercapita<-lm(SalesPerCapita ~ Population + GDPperHead + UnemploymentRate + EducationSpending , data = EUSales)
